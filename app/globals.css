@@ -2,3 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
+/* MAIN STYLE */
+
+body {
+    overflow-x: hidden;
+}
+main {
+    @apply mt-20;
+}
+/* TYPOGRAPHY STYLES */
+h1 {
+    @apply text-8xl font-medium;
+}
+
+h2 {
+    @apply text-5xl font-medium;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+p {
+    @apply text-lg;
+}
+
+small {
+    @apply text-xs font-bold tracking-widest;
+}
+
+.wrapper {
+    @apply container mx-auto px-5 lg:px-0;
+}
+
+.sp {
+    @apply py-20;
+}
+
+.eq {
+    transition: 500ms cubic-bezier(0.25, 1, 0.5, 1);
+}
+/* LINK STYLES */
+.link-item {
+    @apply relative;
+}
+
+.link-item::after {
+    @apply eq absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-orange content-[""];
+}
+
+.link-item:hover::after {
+    @apply w-full;
+}
+
+::selection {
+    background-color: #32b8cb;
+    color: #f0f9ff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 10%;
+    background-color: rgb(221, 188, 136);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #fff1f2;
+}
