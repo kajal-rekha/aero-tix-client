@@ -24,7 +24,7 @@ const Navbar = () => {
 
     const dispatch = useDispatch();
     return (
-        <header className="fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-slate bg-slate text-gray/90 backdrop-blur-xl">
+        <header className="fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-gray/20 bg-[#00020c] text-gray/90 backdrop-blur-xl">
             {/* NAV LEFT */}
             <nav className="wrapper flex w-full h-full items-center justify-between gap-5">
                 <div>
@@ -143,31 +143,28 @@ const Navbar = () => {
                                 </li>
 
                                 <li>
-                                    <Link
-                                        href="/products"
-                                        className="link-item"
-                                    >
-                                        Products
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/gallery" className="link-item">
-                                        gallery
-                                    </Link>
-                                </li>
-
-                                <li>
                                     <Link href="/about" className="link-item">
                                         About
                                     </Link>
                                 </li>
+                                <li>
+                                    <Link href="/offers" className="link-item">
+                                        Offers
+                                    </Link>
+                                </li>
+
+                                <li>
+                                    <Link href="/seats" className="link-item">
+                                        Seats
+                                    </Link>
+                                </li>
 
                                 <li>
                                     <Link
-                                        href="/testimonial"
+                                        href="/destination"
                                         className="link-item"
                                     >
-                                        Testimonial
+                                        Destinations
                                     </Link>
                                 </li>
                                 <li>
