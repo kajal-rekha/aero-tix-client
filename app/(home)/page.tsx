@@ -1,9 +1,18 @@
+// import BookingForm from "@/components/BookingForm";
+
 import Hero from "@/components/Hero";
+import Service from "@/components/Service";
 
 const HomePage = () => {
-    return <main>
-        <Hero/>
-    </main>;
+    // const flightId = "abc123"
+    return (
+        <main>
+            <Hero />
+            {/* <BookingForm flightId={flightId} /> */}
+
+            <Service/>
+        </main>
+    );
 };
 
 export default HomePage;

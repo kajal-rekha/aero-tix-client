@@ -12,7 +12,7 @@ main {
 }
 /* TYPOGRAPHY STYLES */
 h1 {
-    @apply  text-3xl md:text-6xl  font-medium;
+    @apply text-3xl md:text-6xl  font-medium;
 }
 
 h2 {
@@ -57,7 +57,8 @@ small {
 
 ::selection {
     background-color: #ddbc88;
-    color: #f0f9ff;
+    color: #050505;
+    color: #000518;
 }
 
 ::-webkit-scrollbar {
@@ -78,7 +79,7 @@ small {
     height: 100%;
 }
 .airplane {
-    animation:fly 3s infinite cubic-bezier(0, 0, 1, 1) 0.2s;
+    animation: fly 3s infinite cubic-bezier(0, 0, 1, 1) 0.2s;
 }
 
 @keyframes fly {
@@ -89,4 +90,24 @@ small {
     100% {
         transform: rotate(360deg) translate(-10px) rotate(-360deg);
     }
+}
+
+.service-left {
+    background-image: url("../public/images/service3.webp");
+    height: 75vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.service-right {
+    background-image: url("../public/images/service2.jpeg");
+    height: 75vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
 }
