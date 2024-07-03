@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 interface BookingFormProps {
-    flightId: string ;
+    flightId: string;
 }
 
 const BookingForm: React.FC<BookingFormProps> = ({ flightId }) => {
@@ -26,7 +26,6 @@ const BookingForm: React.FC<BookingFormProps> = ({ flightId }) => {
                 throw new Error("Failed to book flight");
             }
 
-            // Redirect to bookings page or show success message
             router.push("/bookings");
         } catch (error) {
             console.error("Error booking flight:", error);

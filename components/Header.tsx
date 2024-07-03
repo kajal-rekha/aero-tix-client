@@ -41,6 +41,11 @@ const Navbar = () => {
                             Home
                         </Link>
                     </li>
+                    <li>
+                        <Link href="/flights" className="link-item">
+                            Flights
+                        </Link>
+                    </li>
 
                     <li>
                         <Link href="/about" className="link-item">
@@ -80,7 +85,7 @@ const Navbar = () => {
                 <div className="flex gap-5 items-center justify-center -mr-60 md:mr-0">
                     {!session?.user ? (
                         <Link
-                            href="/sign-in"
+                            href="/sign-up"
                             className={buttonVariants({ variant: "ocean" })}
                         >
                             Sign in
