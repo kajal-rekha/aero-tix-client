@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux";
 interface SignInFormData {
     email: string;
     password: string;
+    
 }
 const SignInForm = () => {
     const [formData, setFormData] = useState<SignInFormData>({

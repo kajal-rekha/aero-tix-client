@@ -1,11 +1,9 @@
-import { userType } from "@/types/userType";
 import axios from "axios";
 import toast from "react-hot-toast";
 
-
 export const axiosPost = async (
     endpoint: string,
-    data: Pick<userType, "email" | "password">,
+    data: Record<string, any>,
     token: string = ""
 ) => {
     try {
@@ -23,6 +21,11 @@ export const axiosPost = async (
         }
     } catch (error: any) {
         console.error("Error in axiosPost:", error);
-        toast.error(error.response?.data?.error);
+        if (error.response) {
+            console.error("Server responded with:", error.response.data);
+            toast.error(error.response.data.error || "An error occurred");
+        } else {
+            toast.error("An error occurred");
+        }
     }
 };
