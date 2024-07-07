@@ -95,7 +95,7 @@ const Navbar = () => {
                             <div className="w-12 h-12 overflow-hidden rounded-full">
                                 <Image
                                     src={session.user.image}
-                                    alt={session.user.name}
+                                    alt={session.user.username}
                                     width={64}
                                     height={64}
                                     priority

@@ -7,6 +7,7 @@ export type FlightType = {
     departure_time: string;
     arrival_time: string;
     price: number;
+    image: string;
     seats: number;
     __v: number;
 };
