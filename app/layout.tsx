@@ -1,4 +1,5 @@
 import Navbar from "@/components/Header";
+import Footer from "@/components/Footer";
 import ReduxProvider from "@/providers/ReduxProvider";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -23,6 +24,8 @@ export default function RootLayout({
                     <Navbar />
 
                     {children}
+
+                    <Footer />
                 </ReduxProvider>
             </body>
         </html>

@@ -12,7 +12,7 @@ const FlightsCard: React.FC<FlightsCardProps> = ({ flight }) => {
         <div>
             <div
                 key={flight._id}
-                className="w-full lg:w-[30rem] lg:gap-8 xl:gap-5 xl:w-[25rem] shadow-md rounded-md overflow-hidden p-5 bg-white rounded-xl"
+                className="w-full lg:gap-8 xl:gap-5 shadow-md rounded-md overflow-hidden p-5 bg-white rounded-xl"
             >
                 <div className="w-full h-[20rem] lg:h-[14rem] overflow-hidden group rounded-xl">
                     <Image
@@ -56,7 +56,7 @@ const FlightsCard: React.FC<FlightsCardProps> = ({ flight }) => {
                     </div>
                     <div className="mt-2">
                         <Link
-                            href={`/flight/${flight._id}`}
+                            href={`/flights/${flight._id}`}
                             className={cn(buttonVariants({ variant: "ocean" }))}
                         >
                             View Details

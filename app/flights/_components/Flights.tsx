@@ -17,10 +17,12 @@ const Flights = () => {
 
     return (
         <section className="mt-40 ">
-            <h2 className="text-center mb-10">Recommends Flights</h2>
+            <h2 className="text-center mb-10">
+                Exclusive Flight Recommendations
+            </h2>
 
             <div className="bg-gray/30 pt-5">
-                <div className="mt-8 grid grid-cols md:grid-cols-2 lg:grid-cols-3 xxl:grid-cols-4 gap-3 wrapper ">
+                <div className="mt-8 grid grid-cols md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 wrapper ">
                     {pathname === "/flights" &&
                         flights.map((flight: any) => (
                             <FlightsCard key={flight._id} flight={flight} />
