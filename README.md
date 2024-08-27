@@ -1,8 +1,8 @@
-# Aero-Tix: An Online Air Ticket Booking Application
+# Aero-Tix : An Online Air Ticket Booking Application
 
 ## Project Description
 
-**Aero-Tix** is a feature-rich online air ticket booking application built with modern web technologies. It offers a seamless and intuitive user experience for searching flights, booking tickets, and managing reservations. The application leverages a combination of powerful tools and libraries to ensure a responsive and efficient interface, making the ticket booking process smooth and enjoyable for users.
+**Aero-Tix** is an advanced online air ticket booking application built with a modern tech stack to provide users with a seamless and efficient booking experience. The application allows users to search for flights, book tickets, and manage their reservations with ease. Designed with performance and user experience in mind, Aero-Tix utilizes Next.js for server-side rendering, TypeScript for robust and maintainable code, and Tailwind CSS for a responsive and visually appealing interface. The application also incorporates state-of-the-art libraries like Redux for state management, SWR for data fetching, and Lenis for smooth scrolling, ensuring a smooth and interactive user experience. Aero-Tix is a comprehensive solution for anyone looking to create a high-performance air ticket booking platform.
 
 ## Project Features
 
