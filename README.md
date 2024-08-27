@@ -26,15 +26,15 @@
 
 ## Tools and Technologies
 
-- **Next.js:** React framework for server-side rendering and static site generation.
-- **TypeScript:** Statically typed JavaScript for better code quality and maintainability.
-- **Tailwind CSS:** Utility-first CSS framework for custom designs.
-- **Redux & Redux-Persist:** State management and persistence.
-- **Axios & SWR:** For data fetching and API requests.
-- **Swiper.js:** Touch-friendly slider component for carousels.
-- **Lenis:** Smooth scrolling library for improved UX.
-- **React-Hot-Toast:** For displaying toast notifications.
-- **clsx & Class-Variance-Authority:** Utilities for managing dynamic classes and styling.
+- **Next.js:** 
+- **TypeScript:**
+- **Tailwind CSS:** 
+- **Redux & Redux-Persist:**
+- **Axios & SWR:** 
+- **Swiper.js:** 
+- **Lenis:** 
+- **React-Hot-Toast:** 
+- **clsx & Class-Variance-Authority:**
 
 ## Installation
 
