@@ -12,7 +12,7 @@ const FlightsCard: React.FC<FlightsCardProps> = ({ flight }) => {
         <div>
             <div
                 key={flight._id}
-                className="w-full lg:gap-8 xl:gap-5 shadow-md rounded-md overflow-hidden p-5 bg-white rounded-xl"
+                className="w-full lg:gap-8 xl:gap-5 shadow-md rounded-md overflow-hidden p-5 bg-white"
             >
                 <div className="w-full h-[20rem] lg:h-[14rem] overflow-hidden group rounded-xl">
                     <Image

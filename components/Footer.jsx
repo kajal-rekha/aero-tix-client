@@ -50,7 +50,7 @@ const Footer = () => {
                             More links
                         </h2>
                         <ul className="space-y-4 hidden md:block font-medium">
-                             <li>
+                             <li className="mt-3">
                                     <Link href="/seats" className="link-item">
                                         Seats
                                     </Link>

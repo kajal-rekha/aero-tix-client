@@ -13,7 +13,7 @@ const Service = () => {
     );
 
     return (
-        <section className="mt-28 mb-20">
+        <section className="mt-32 ">
             <div className="wrapper grid grid-cols-1 md:grid-cols-2 gap-10">
                 <div className="service-left relative ">
                     <Overlay />

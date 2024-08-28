@@ -16,8 +16,8 @@ const Flights = () => {
     if (error) return <p>Error loading flights.</p>;
 
     return (
-        <section className="mt-40 ">
-            <h2 className="text-center mb-10">
+        <section className="mt-32 ">
+            <h2 className="text-center mb-2">
                 Exclusive Flight Recommendations
             </h2>
 

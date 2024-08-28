@@ -1,13 +1,11 @@
-import { cn } from "@/lib/utils";
 import Image from "next/image";
-import React from "react";
-import Button, { buttonVariants } from "./ui/Button";
+import Button from "./ui/Button";
 
 const AboutUs = () => {
     return (
-        <section className="bg-orange mt-32 pb-20 pt-20">
+        <section className="mt-32 pb-20 ">
             <div className="wrapper">
-                <div className="grid grid-cols md:grid-cols-2 gap-14">
+                <div className="grid grid-cols md:grid-cols-2 gap-16">
                     <div className="relative">
                         <div className="w-[28rem] h-[39rem] ">
                             <Image
@@ -31,32 +29,52 @@ const AboutUs = () => {
                         </div>
                     </div>
 
-                    <div>
-                        <div className="flex flex-col gap-5 text-white   justify-center mt-10">
-                            <span className="text-black font-medium text-xl">
-                                About Us
-                            </span>
-                            <h2 className="-mt-2 text-3xl text-black">
-                                Lorem ipsum dolor sit amet consectetur.
-                            </h2>
-                            <p className="text-black">
-                                Aerotix is a forward-thinking airline dedicated
-                                to providing seamless and convenient air travel
-                                experiences. With a range of flight options,
-                                Aerotix ensures every passenger enjoys top-notch
-                                service, punctual departures, and smooth
-                                arrivals. The airline offers user-friendly
-                                booking systems and detailed travel itineraries
-                                to cater to both leisure and business travelers.
-                                Emphasizing efficiency and comfort, Aerotix aims
-                                to make air travel accessible and enjoyable for
-                                all. Whether for a quick business trip or a
-                                relaxing vacation, Aerotix is committed to
-                                delivering a superior flying experience.
-                            </p>
-                            <div className="mt-5">
-                               <button className=" bg-black text-white/80 py-4 px-7 rounded-lg hover:bg-black/95 duration-300"> Discover more</button>
-                            </div>
+                    <div className="flex flex-col gap-5 justify-center mt-10">
+                        <h3 className="font-semibold text-xl">
+                            <span className="text-orange"> Why </span>
+                            Choose Us
+                        </h3>
+                        <h2 className="font-semibold text-3xl">
+                            Trust in Aerotix for consistent, dependable service
+                            on every flight.
+                        </h2>
+                        <p>
+                            Aero-Tix is your ultimate solution for seamless air
+                            ticket booking. Designed with user convenience in
+                            mind, our platform offers a smooth and efficient
+                            booking process, ensuring you find the best flights
+                            at the best prices. Whether you are planning a quick
+                            getaway or a long-haul journey, Aero-Tix makes it
+                            easy to book your flights with confidence and ease.
+                        </p>
+
+                        <div>
+                            <ul className="flex flex-col gap-4 mt-2">
+                                <li className=" flex items-center gap-5 text-lg">
+                                    <span className="bg-orange w-3 h-3 rotate-[50deg]"></span>
+                                    Receive top-notch service at every stage of
+                                    your journey.
+                                </li>
+                                <li className="flex items-center gap-5 text-lg">
+                                    <span className=" bg-orange w-3 h-3 rotate-[50deg]"></span>
+                                    Advanced measures to ensure your safety and
+                                    comfort.
+                                </li>
+                                <li className=" flex items-center gap-5 text-lg">
+                                    <span className=" bg-orange w-3 h-3 rotate-[50deg]"></span>
+                                    Easy access to domestic and international
+                                    destinations.
+                                </li>
+                                <li className=" flex items-center gap-5 text-lg">
+                                    <span className=" bg-orange w-3 h-3 rotate-[50deg]"></span>
+                                    Our commitment to getting you to your
+                                    destination on time.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="mt-2">
+                            <Button>Discover more</Button>
                         </div>
                     </div>
                 </div>
