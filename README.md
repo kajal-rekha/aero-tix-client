@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aero-Tix : An Online Air Ticket Booking Application
 
-## Getting Started
+## Project Description
 
-First, run the development server:
+**Aero-Tix** is an advanced online air ticket booking application built with a modern tech stack to provide users with a seamless and efficient booking experience. The application allows users to search for flights, book tickets, and manage their reservations with ease. Designed with performance and user experience in mind, Aero-Tix utilizes Next.js for server-side rendering, TypeScript for robust and maintainable code, and Tailwind CSS for a responsive and visually appealing interface. The application also incorporates state-of-the-art libraries like Redux for state management, SWR for data fetching, and Lenis for smooth scrolling, ensuring a smooth and interactive user experience. Aero-Tix is a comprehensive solution for anyone looking to create a high-performance air ticket booking platform.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Flight Search & Booking:** 
+  - Browse and search for available flights.
+  - Book tickets with an intuitive user interface.
+- **User Authentication & Profile Management:** 
+  - Secure login and registration using JWT.
+  - Manage user profiles and booking history.
+- **Responsive Design:** 
+  - Tailwind CSS ensures a responsive and modern design.
+  - Swiper.js provides smooth and interactive carousels for displaying featured deals.
+- **State Management:** 
+  - Redux and Redux-Persist handle global state and data persistence across sessions.
+- **Smooth Scrolling & Animations:**
+  - Lenis for smooth scrolling and enhanced user experience.
+- **Data Fetching:** 
+  - SWR and Axios for efficient data fetching and caching.
+- **Utility-First Styling:** 
+  - clsx and Class-Variance-Authority for managing dynamic class names and styling.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Tools and Technologies
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Next.js:** 
+- **TypeScript:**
+- **Tailwind CSS:** 
+- **Redux & Redux-Persist:**
+- **Axios & SWR:** 
+- **Swiper.js:** 
+- **Lenis:** 
+- **React-Hot-Toast:** 
+- **clsx & Class-Variance-Authority:**
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+To set up this project locally, follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
+    ```bash
+    git clone https://github.com/kajal-rekha/aero-tix.git
+    cd aero-tix
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. **Install dependencies:**
+    ```bash
+    npm install
+    ```
 
-## Deploy on Vercel
+3. **Set up environment variables:**
+   - Create a `.env.local` file in the root directory and add the necessary environment variables:
+     ```plaintext
+     NEXT_PUBLIC_API_URL=your_api_url
+     NEXT_PUBLIC_JWT_SECRET=your_jwt_secret
+     ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   The application will be accessible at `http://localhost:3000`.
+
+## Conclusion
+
+**Aero-Tix** combines the latest web development tools to create a dynamic and efficient air ticket booking application. Its use of modern technologies ensures a responsive design, secure user authentication, and smooth user interactions, making it a robust solution for online flight booking needs.
+
+Feel free to explore, contribute, or report any issues you encounter.
+
