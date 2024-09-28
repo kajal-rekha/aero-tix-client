@@ -1,9 +1,11 @@
  //import BookingForm from "@/components/BookingForm";
 
 import Hero from "@/components/Hero";
-import AboutUs from "@/components/AboutUs";
+import About from "@/components/About";
 import Service from "@/components/Service";
 import Flights from "../flights/page";
+import Offer from "@/components/Offer";
+//import Pilot from "@/components/pilots/Pilot";
 
 const HomePage = () => {
      //const flightId = "abc123"
@@ -12,9 +14,10 @@ const HomePage = () => {
             <Hero />
             <Service />
             <Flights />
+            <Offer />
             {/* <BookingForm flightId={flightId} /> */}
-
-            <AboutUs/>
+            <About />
+            {/* <Pilot /> */}
         </main>
     );
 };

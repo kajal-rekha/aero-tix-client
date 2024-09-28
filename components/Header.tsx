@@ -16,9 +16,6 @@ const Navbar = () => {
     const handleToggle = () => {
         setToggle((prev) => !prev);
     };
-    const handleOpen = () => {
-        setToggle(false);
-    };
 
     const session = useSelector((state: RootState) => state.auth.userAndToken);
 
@@ -34,8 +31,7 @@ const Navbar = () => {
                 </div>
 
                 {/* NAV MID */}
-
-                <ul className="md:flex hidden items-center gap-5 text-lg md:block">
+                <ul className="md:flex hidden items-center gap-5 text-lg ">
                     <li>
                         <Link href="/" className="link-item">
                             Home
@@ -82,7 +78,7 @@ const Navbar = () => {
                 </ul>
 
                 {/* NAV RIGHT */}
-                <div className="flex gap-5 items-center justify-center -mr-60 md:mr-0">
+                <div className="flex gap-5 items-center justify-center -mr-40 md:mr-0">
                     {!session?.user ? (
                         <Link
                             href="/sign-up"
@@ -130,63 +126,36 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* mobile menu */}
-            {toggle ? (
-                <div className="md:hidden">
-                    <div
-                        onClick={handleOpen}
-                        className={`w-screen h-screen fixed z-[98] bg-slate top-20 left-0 right-0 bottom-0 flex text-light/80 text-lg justify-center items-center ${
-                            toggle ? `` : "hidden"
-                        }`}
-                    >
-                        <div>
-                            <ul className="flex flex-col gap-2 items-center -mt-24">
-                                <li>
-                                    <Link href="/" className="link-item">
-                                        Home
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/about" className="link-item">
-                                        About
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/offers" className="link-item">
-                                        Offers
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link href="/seats" className="link-item">
-                                        Seats
-                                    </Link>
-                                </li>
-
-                                <li>
-                                    <Link
-                                        href="/destination"
-                                        className="link-item"
-                                    >
-                                        Destinations
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/blog" className="link-item">
-                                        Blog
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link href="/contact" className="link-item">
-                                        Contact
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            ) : null}
+            {/* Mobile Menu */}
+            <div
+                className={`fixed top-20 left-0  h-screen w-full  transition-transform duration-500 bg-gray text-black ${
+                    toggle ? "-translate-y-0" : "translate-y-full"
+                }`}
+            >
+                <ul className="flex flex-col gap-2 p-10 ">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/">Home</Link>
+                    </li>
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/about">About</Link>
+                    </li>
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/offers">Offers</Link>
+                    </li>
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/seats">Seats</Link>
+                    </li>
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/destination">Destinations</Link>
+                    </li>
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/blog">Blog</Link>
+                    </li>
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                        <Link href="/contact">Contact</Link>
+                    </li>
+                </ul>
+            </div>
         </header>
     );
 };

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Button from "./ui/Button";
 
-const AboutUs = () => {
+const About = () => {
     return (
-        <section className="mt-32 pb-20 ">
+        <section className="mt-32 ">
             <div className="wrapper">
                 <div className="grid grid-cols md:grid-cols-2 gap-16">
                     <div className="relative">
@@ -17,7 +17,7 @@ const AboutUs = () => {
                                 className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
-                        <div className="absolute top-14 -right-2 w-[28rem] h-[32rem]">
+                        <div className="absolute top-16 -right-2 w-[25rem] h-[31rem]">
                             <Image
                                 src="https://images.pexels.com/photos/3616808/pexels-photo-3616808.jpeg?auto=compress&cs=tinysrgb&w=600"
                                 alt="images"
@@ -45,7 +45,7 @@ const AboutUs = () => {
                             booking process, ensuring you find the best flights
                             at the best prices. Whether you are planning a quick
                             getaway or a long-haul journey, Aero-Tix makes it
-                            easy to book your flights with confidence and ease.
+                            easy to book your flights with confidence.
                         </p>
 
                         <div>
@@ -71,6 +71,8 @@ const AboutUs = () => {
                                     destination on time.
                                 </li>
                             </ul>
+
+
                         </div>
 
                         <div className="mt-2">
@@ -84,4 +86,4 @@ const AboutUs = () => {
     );
 };
 
-export default AboutUs;
+export default About;
