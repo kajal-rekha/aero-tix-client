@@ -10,6 +10,8 @@ body {
 main {
     @apply mt-20;
 }
+
+
 /* TYPOGRAPHY STYLES */
 h1 {
     @apply text-3xl md:text-6xl  font-medium;
@@ -129,3 +131,9 @@ small {
 }
  */
 
+
+
+ 
+.stat-item:last-child div:last-child {
+    border: none; 
+}

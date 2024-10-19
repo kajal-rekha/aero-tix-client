@@ -29,14 +29,14 @@ const Stat: React.FC<StatProps> = ({ endValue, label }) => {
     }, [setIsVisible]);
 
     return (
-        <div ref={ref} className="text-center  flex gap-5">
+        <div ref={ref} className="text-center  flex gap-5 stat-item">
             <div>
-                <div className="text-4xl font-bold text-white mb-2">
+                <div className="text-2xl md:text-4xl font-bold text-white mb-2">
                     {count}
                 </div>
                 <div className=" text-orange">{label}</div>
             </div>
-            <div className="border-rose-400 border-r h-2px w-full"></div>
+            <div className="border-orange border-r w-full ml-10 border-dashed h-20 hidden md:block"></div>
         </div>
     );
 };

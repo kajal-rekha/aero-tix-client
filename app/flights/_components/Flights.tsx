@@ -7,6 +7,7 @@ import Link from "next/link";
 import FlightsCard from "./FlightsCard";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import SectionTittle from "@/components/SectionTittle";
 
 const Flights = () => {
     const { data: flights, error, isLoading } = useFetch("/api/flights");
@@ -16,12 +17,9 @@ const Flights = () => {
     if (error) return <p>Error loading flights.</p>;
 
     return (
-        <section className="mt-32 ">
-            <h2 className="text-center mb-2">
-                Exclusive Flight Recommendations
-            </h2>
-
-            <div className="bg-gray/30 pt-5">
+        <section className="mt-28 bg-gray/30 pt-5">
+            <SectionTittle h3=" Exclusive Flight Recommendations"/>
+            <div className=" pt-5">
                 <div className="mt-8 grid grid-cols md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 wrapper ">
                     {pathname === "/flights" &&
                         flights.map((flight: any) => (

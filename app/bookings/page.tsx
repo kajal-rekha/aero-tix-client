@@ -9,12 +9,12 @@ const BookingPage = ({ flight }: { flight: FlightType }) => {
 
     return (
         <main>
-            <div className="wrapper mb-20">
-                <h1 className="text-2xl font-bold mb-5">Book Flight</h1>
+            <div className="wrapper mb-20 max-w-2xl">
+                <h1 className="text-2xl font-bold mb-5">Booking Flight</h1>
                 <BookingForm flight={flight} />
                 <button
                     onClick={() => router.back()}
-                    className="px-4 py-2 bg-red-500 text-white rounded-lg mt-4"
+                    className="px-4 py-2 bg-red-500 text-white rounded-lg "
                 >
                     Go Back
                 </button>

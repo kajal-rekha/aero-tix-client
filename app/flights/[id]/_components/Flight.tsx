@@ -12,20 +12,21 @@ interface FlightProps {
 const Flight: React.FC<FlightProps> = ({ flight }) => {
     return (
         <>
-            <div className="wrapper mb-20">
-                <div className="w-full overflow-hidden h-[80vh] mt-10">
+            <div className="wrapper mb-20 mt-32">
+
+                <div className="grid grid-cols md:grid-cols-2 gap-14 items-center ">
+                                    <div className="w-full overflow-hidden md:h-[32rem] mt-10 group rounded-lg">
                     <Image
                         src={flight.image}
                         width={500}
                         height={500}
                         alt={flight.airline}
                         priority
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover  group-hover:scale-110 eq"
                     />
                 </div>
-                <div className="grid grid-cols md:grid-cols-2 gap-5 mt-12">
                     {" "}
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-4 mt-8">
                         <h4 className="text-orange font-semibold text-xl">
                             About {flight.airline}
                         </h4>
@@ -40,9 +41,8 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                             well-illuminated cabin, with larger windows and
                             improved air quality.
                         </p>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <p>
+
+                         <p>
                             <strong>Airline:</strong> {flight.airline}
                         </p>
                         <p>
@@ -71,28 +71,13 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                                 Book Now
                             </Link>
                         </div>
+
                     </div>
+                   
                 </div>
             </div>
 
-            {/* <div>
-                <div className="wrapper grid grid-cols md:grid-cols-2 gap-5">
-                    <Image
-                        src="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt=""
-                        width={500}
-                        height={500}
-                        className="w-full"
-                    />
-                    <Image
-                        src="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=600"
-                        alt=""
-                        width={500}
-                        height={500}
-                        className="w-full"
-                    />
-                </div>
-            </div> */}
+            
         </>
     );
 };

@@ -55,12 +55,6 @@ const Navbar = () => {
                     </li>
 
                     <li>
-                        <Link href="/seats" className="link-item">
-                            Seats
-                        </Link>
-                    </li>
-
-                    <li>
                         <Link href="/destination" className="link-item">
                             Destinations
                         </Link>
@@ -78,7 +72,7 @@ const Navbar = () => {
                 </ul>
 
                 {/* NAV RIGHT */}
-                <div className="flex gap-5 items-center justify-center -mr-40 md:mr-0">
+                <div className="flex gap-5 items-center justify-center -mr-28 md:mr-0">
                     {!session?.user ? (
                         <Link
                             href="/sign-up"
@@ -133,25 +127,22 @@ const Navbar = () => {
                 }`}
             >
                 <ul className="flex flex-col gap-2 p-10 ">
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/">Home</Link>
                     </li>
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/about">About</Link>
                     </li>
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/offers">Offers</Link>
                     </li>
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
-                        <Link href="/seats">Seats</Link>
-                    </li>
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/destination">Destinations</Link>
                     </li>
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/blog">Blog</Link>
                     </li>
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/contact">Contact</Link>
                     </li>
                 </ul>
