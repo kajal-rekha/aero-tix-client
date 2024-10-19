@@ -31,7 +31,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                             About {flight.airline}
                         </h4>
                         <p>
-                            {flight.airline} is a state-of-the-art aircraft
+                            {flight.airline} {`is a state-of-the-art aircraft
                             designed for long-haul flights, offering exceptional
                             fuel efficiency and passenger comfort. Its
                             innovative composite structure reduces weight and
@@ -39,7 +39,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                             and new engine technology ensure a smooth and quiet
                             flight. The Dreamliner's spacious and
                             well-illuminated cabin, with larger windows and
-                            improved air quality.
+                            improved air quality.`}
                         </p>
 
                          <p>
