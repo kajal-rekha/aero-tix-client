@@ -30,17 +30,15 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                         <h4 className="text-orange font-semibold text-xl">
                             About {flight.airline}
                         </h4>
-                        <p>
-                            {flight.airline} {`is a state-of-the-art aircraft
-                            designed for long-haul flights, offering exceptional
-                            fuel efficiency and passenger comfort. Its
-                            innovative composite structure reduces weight and
-                            increases fuel savings, while advanced aerodynamics
-                            and new engine technology ensure a smooth and quiet
-                            flight. The Dreamliner's spacious and
-                            well-illuminated cabin, with larger windows and
-                            improved air quality.`}
-                        </p>
+                       <p>
+    {flight.airline} {`is a state-of-the-art aircraft
+    designed for long-haul flights, offering exceptional
+    fuel efficiency and passenger comfort. Its innovative
+    composite structure reduces weight and increases fuel savings,
+    while advanced aerodynamics and new engine technology ensure a
+    smooth and quiet flight. The Dreamliner&apos;s spacious and well-illuminated
+    cabin, with larger windows and improved air quality.`}
+</p>
 
                          <p>
                             <strong>Airline:</strong> {flight.airline}
