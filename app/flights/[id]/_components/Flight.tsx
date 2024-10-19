@@ -30,7 +30,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                         <h4 className="text-orange font-semibold text-xl">
                             About {flight.airline}
                         </h4>
-                       <p>
+                      
    <p>
     {flight.airline} is a state-of-the-art aircraft
     designed for long-haul flights, offering exceptional
@@ -41,7 +41,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
     well-illuminated cabin, with larger windows and improved air quality.
 </p>
 
-</p>
+
 
                          <p>
                             <strong>Airline:</strong> {flight.airline}
