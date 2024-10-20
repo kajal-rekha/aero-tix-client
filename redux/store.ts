@@ -12,8 +12,8 @@ import {
 } from "redux-persist";
 
 import storage from "redux-persist/lib/storage";
-
 import authReducer from "./features/auth/authSlice";
+import bookingReducer from "./features/booking/bookingSlice";
 
 const persistConfig = {
     key: "root",
@@ -22,7 +22,8 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-    auth: authReducer
+    auth: authReducer,
+    booking: bookingReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

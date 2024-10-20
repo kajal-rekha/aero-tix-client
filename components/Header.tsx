@@ -99,7 +99,7 @@ const Navbar = () => {
 
                                         toast.success("Logout success!");
                                     }}
-                                    variant="secondary"
+                                    variant="ocean"
                                 >
                                     Logout
                                 </Button>

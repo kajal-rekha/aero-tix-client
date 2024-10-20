@@ -53,7 +53,7 @@ const Destination = () => {
                                                     {destination.country}
                                                 </h3>
                                             </div>
-                                            <p className="text-gray-600 mb-2 group-hover:text-white transition-colors duration-300">
+                                            <p className="text-gray-600 mb-2 group-hover:text-white transition-colors duration-300 text-[16px]">
                                                 Price: ${destination.price}
                                             </p>
                                         </div>

@@ -10,18 +10,13 @@ import Destination from "../destination/page";
 //import Blog from "../blog/page";
 import ContactPage from "../contact/page";
 import Blog from "@/components/Blog";
-//import BookingForm from "@/components/BookingForm";
-//import FlightBookingForm from "@/components/FlightBooking";
 
 const HomePage = () => {
-     const flightId = "abc123"
     return (
         <main>
             <Hero />
-            {/* <FlightBookingForm/> */}
             <Service />
             <Flights />
-            {/* <BookingForm flightId={flightId} /> */}
             <About />
             <Offer />
             <Destination />
