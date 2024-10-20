@@ -38,7 +38,7 @@ const Destination = () => {
                                             src={destination.image}
                                             alt={destination.city}
                                             width={300}
-                                            height={200}
+                                            height={200} priority
                                             className="w-full h-full object-cover group-hover:scale-110 duration-300"
                                         />
                                     </div>

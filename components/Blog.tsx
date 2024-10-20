@@ -23,7 +23,7 @@ const Blog = () => {
                               src={post.image}
                               alt={post.title}
                               width={600}
-                              height={400}
+                              height={400} priority 
                               className="w-full h-[400px] object-cover"
                           />
                           <div className="absolute inset-0 bg-slate bg-opacity-50"></div>

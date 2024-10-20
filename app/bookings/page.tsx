@@ -12,8 +12,10 @@ const BookingPage = () => {
     }
 
     return (
-        <main className="wrapper mt-36 min-h-screen ">
-            <h2 className="text-2xl md:text-4xl text-center font-semibold">Fill in the form to finalize your booking</h2>
+        <main className="wrapper mt-36 min-h-screen">
+            <h2 className="text-2xl md:text-4xl text-center font-semibold">
+                Fill in the form to finalize your booking
+            </h2>
             <BookingForm flightId={flightId} />
         </main>
     );

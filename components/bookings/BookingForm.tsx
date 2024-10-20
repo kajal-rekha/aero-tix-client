@@ -14,36 +14,40 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
     const router = useRouter();
     const dispatch = useDispatch();
 
-    const handleSubmit = async (e: any) => {
-        e.preventDefault();
+   const handleSubmit = async (e: any) => {
+       e.preventDefault();
 
-        const bookingData = {
-            flightId,
-            name,
-            email,
-            phone,
-            seat_number: seatNumber
-        };
+       const bookingData = {
+           flightId,
+           name,
+           email,
+           phone,
+           seat_number: seatNumber
+       };
 
-        try {
-            const res = await fetch("/bookings", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(bookingData)
-            });
+       console.log("Booking data:", bookingData);
 
-            if (res.ok) {
-                dispatch(addBooking(bookingData));
-                router.push("/");
-            } else {
-                console.error("Booking failed");
-            }
-        } catch (error) {
-            console.error("Error submitting booking:", error);
-        }
-    };
+       try {
+           const res = await fetch("/bookings", {
+               method: "POST",
+               headers: {
+                   "Content-Type": "application/json"
+               },
+               body: JSON.stringify(bookingData)
+           });
+
+           if (res.ok) {
+               console.log("Booking added successfully");
+               dispatch(addBooking(bookingData));
+               router.push("/bookingData");
+           } else {
+               console.error("Booking failed", res.status);
+           }
+       } catch (error) {
+           console.error("Error submitting booking:", error);
+       }
+   };
+
 
     return (
         <div className="mt-10">

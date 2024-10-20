@@ -3,9 +3,7 @@ import { cn } from "@/lib/utils";
 import { RootState } from "@/redux/store";
 import { FlightType } from "@/types/flightType";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
 import { useSelector } from "react-redux";
 
 interface FlightProps {

@@ -11,7 +11,7 @@ const Pilot = () => {
                 src="https://images.pexels.com/photos/1089307/pexels-photo-1089307.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                 alt="Aviation background"
                 layout="fill"
-                objectFit="cover"
+                objectFit="cover" priority
                 className="filter brightness-50"
             />
 

@@ -18,7 +18,7 @@ const Navbar = () => {
     };
 
     const session = useSelector((state: RootState) => state.auth.userAndToken);
-
+    const bookings = useSelector((state: RootState) => state.booking.bookings);
     const dispatch = useDispatch();
     return (
         <header className="fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-gray/20 bg-[#00020c] text-gray/90 backdrop-blur-xl">
@@ -59,6 +59,14 @@ const Navbar = () => {
                             Destinations
                         </Link>
                     </li>
+                    {session?.user && bookings.length > 0 && (
+                        <li className="relative">
+                            <Link href="/bookingData" className="link-item">
+                                Bookings
+                            </Link>
+                        </li>
+                    )}
+
                     <li>
                         <Link href="/blog" className="link-item">
                             Blog
