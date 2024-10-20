@@ -6,10 +6,11 @@ const Offer = () => {
     return (
         <section className="relative h-[500px] overflow-hidden mt-32">
             <Image
-                src="https://images.pexels.com/photos/26319144/pexels-photo-26319144/free-photo-of-pilot-sitting-in-airplane-cockpit.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                src="https://images.unsplash.com/photo-1587893904933-5b23fefaea6d?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="offer"
                 layout="fill"
-                objectFit="cover" priority
+                objectFit="cover"
+                priority
                 className="z-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-slate to-transparent z-2"></div>

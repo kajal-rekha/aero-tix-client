@@ -1,4 +1,4 @@
-import { buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/Button";
 import { cn } from "@/lib/utils";
 import { RootState } from "@/redux/store";
 import { FlightType } from "@/types/flightType";

@@ -1,8 +1,8 @@
 "use client";
 
-import Button, { buttonVariants } from "@/components/ui/Button";
+import { buttonVariants } from "@/components/ui/Button";
 import useFetch from "@/hooks/use-fetch";
-import Image from "next/image";
+
 import Link from "next/link";
 import FlightsCard from "./FlightsCard";
 import { usePathname } from "next/navigation";
@@ -18,7 +18,7 @@ const Flights = () => {
 
     return (
         <section className="mt-28 bg-gray/30 pt-5">
-            <SectionTittle h3=" Exclusive Flight Recommendations"/>
+            <SectionTittle h3=" Exclusive Flight Recommendations" />
             <div className=" pt-5">
                 <div className="mt-8 grid grid-cols md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-10 wrapper ">
                     {pathname === "/flights" &&
