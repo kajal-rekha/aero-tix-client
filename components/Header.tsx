@@ -147,6 +147,14 @@ const Navbar = () => {
                     <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/destination">Destinations</Link>
                     </li>
+                     {session?.user && bookings.length > 0 && (
+                        <li className="relative hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
+                            <Link href="/bookingData">
+                                Bookings
+                            </Link>
+                        </li>
+                    )}
+
                     <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
                         <Link href="/blog">Blog</Link>
                     </li>

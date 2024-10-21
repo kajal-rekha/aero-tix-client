@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addBooking } from "@/redux/features/booking/bookingSlice";
+import { RootState } from "@/redux/store";
 
 const BookingForm = ({ flightId }: { flightId: string }) => {
     const [name, setName] = useState("");
@@ -13,41 +14,43 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
 
     const router = useRouter();
     const dispatch = useDispatch();
+     const { userAndToken } = useSelector((state: RootState) => state.auth);
 
-   const handleSubmit = async (e: any) => {
-       e.preventDefault();
+    const handleSubmit = async (e: any) => {
+        e.preventDefault();
 
-       const bookingData = {
-           flightId,
-           name,
-           email,
-           phone,
-           seat_number: seatNumber
-       };
+        const bookingData = {
+            user: userAndToken,
+            flightId,
+            name,
+            email,
+            phone,
+            seat_number: seatNumber,
+        };
 
-       console.log("Booking data:", bookingData);
+        console.log("Booking data:", bookingData);
 
-       try {
-           const res = await fetch("/bookings", {
-               method: "POST",
-               headers: {
-                   "Content-Type": "application/json"
-               },
-               body: JSON.stringify(bookingData)
-           });
+        try {
+            const res = await fetch("/api/bookings", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(bookingData),
+            });
 
-           if (res.ok) {
-               console.log("Booking added successfully");
-               dispatch(addBooking(bookingData));
-               router.push("/bookingData");
-           } else {
-               console.error("Booking failed", res.status);
-           }
-       } catch (error) {
-           console.error("Error submitting booking:", error);
-       }
-   };
-
+            if (res.ok) {
+                console.log("Booking added successfully");
+                dispatch(addBooking(bookingData));
+                router.push("/bookingData");
+            } else {
+                const errorText = await res.text();
+                console.error("Booking failed:", res.status, errorText);
+            }
+        } catch (error) {
+            console.error("Error submitting booking:", error);
+        }
+    };
 
     return (
         <div className="mt-10">
@@ -80,6 +83,7 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
                         className="eq w-full rounded-xl border border-gray px-3 py-4 outline-none focus:border-light bg-light text-slate"
                     />
                 </label>
+
                 <label className="flex flex-col gap-2">
                     Phone:
                     <input
@@ -92,6 +96,7 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
                         className="eq w-full rounded-xl border border-gray px-3 py-4 outline-none focus:border-light bg-light text-slate"
                     />
                 </label>
+
                 <label className="flex flex-col gap-2">
                     Seat Number:
                     <input
@@ -104,8 +109,9 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
                         className="eq w-full rounded-xl border border-gray px-3 py-4 outline-none focus:border-light bg-light text-slate"
                     />
                 </label>
+
                 <button
-                    type="submit"
+                    type="submit" 
                     className="rounded-xl py-4 px-8 text-center overflow-hidden font-medium bg-white eq text-slate mt-5"
                 >
                     Book Now
