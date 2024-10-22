@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { useDispatch, useSelector } from "react-redux";
 import { addBooking } from "@/redux/features/booking/bookingSlice";
@@ -14,13 +14,25 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
 
     const router = useRouter();
     const dispatch = useDispatch();
-     const { userAndToken } = useSelector((state: RootState) => state.auth);
+    const { userAndToken } = useSelector((state: RootState) => state.auth);
+
+  
+    useEffect(() => {
+        if (userAndToken) {
+            const { user } = userAndToken;
+            setName(user.username); 
+            setEmail(user.email);
+        }
+    }, [userAndToken]);
 
     const handleSubmit = async (e: any) => {
         e.preventDefault();
 
+       
+        const userId = userAndToken?.user._id;
+
         const bookingData = {
-            user: userAndToken,
+            user: userId, 
             flightId,
             name,
             email,
@@ -31,7 +43,7 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
         console.log("Booking data:", bookingData);
 
         try {
-            const res = await fetch("/api/bookings", {
+            const res = await fetch("https://aero-tix-server.vercel.app/api/bookings", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -66,8 +78,9 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Enter your name"
-                        required
+                          readOnly 
                         className="eq w-full rounded-xl border border-gray px-3 py-4 outline-none focus:border-light bg-light text-slate"
+                       
                     />
                 </label>
 
@@ -79,8 +92,9 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="Enter your email"
-                        required
+                         readOnly 
                         className="eq w-full rounded-xl border border-gray px-3 py-4 outline-none focus:border-light bg-light text-slate"
+                     
                     />
                 </label>
 
@@ -110,8 +124,18 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
                     />
                 </label>
 
+                <label className="flex flex-col gap-2">
+                    Flight ID:
+                    <input
+                        type="text"
+                        value={flightId}
+                        readOnly 
+                        className="eq w-full rounded-xl border border-gray px-3 py-4 outline-none focus:border-light bg-light text-slate"
+                    />
+                </label>
+
                 <button
-                    type="submit" 
+                    type="submit"
                     className="rounded-xl py-4 px-8 text-center overflow-hidden font-medium bg-white eq text-slate mt-5"
                 >
                     Book Now
