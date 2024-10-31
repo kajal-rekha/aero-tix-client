@@ -21,25 +21,28 @@ const BookingData = () => {
             <h1 className="text-2xl font-bold mb-10 text-center">My Bookings</h1>
 
             {bookings.length > 0 ? (
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-7">
+                <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-7">
                     {bookings.map((booking, index) => (
                         <div
                             key={index}
-                            className="p-4 bg-slate text-white rounded-lg shadow-md"
-                        >
-                            <>
-                                <p>
+                            className="p-7 bg-slate text-white rounded-lg shadow-xl flex flex-col gap-3"
+                        > 
+                                <p className="text-[16px]">
+                                    <strong>Username:</strong> {username}  
+                                                                    <p className="text-[15px]"> <strong>Email:</strong> {email}</p> 
+                               <p className="text-[16px]"> <strong>User ID:</strong> {_id} </p>
+                                   
+                                   
+                                </p>
+
+                               
+                                 <p className="text-[16px]">
                                     <strong>Flight ID:</strong> {booking.flightId}
                                 </p>
-                                <p className="text-center mb-8">
-                                    <strong>User ID:</strong> {_id} <br />
-                                    <strong>Username:</strong> {username} <br />
-                                    <strong>Email:</strong> {email}
-                                </p>
-                                <p>
+                                 <p className="text-[16px]">
                                     <strong>Seat Number:</strong> {booking.seat_number}
                                 </p>
-                            </>
+                         
                         </div>
                     ))}
                 </div>
