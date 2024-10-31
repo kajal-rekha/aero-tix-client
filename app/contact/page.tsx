@@ -51,21 +51,25 @@ const Contact = () => {
             <div className="grid grid-cols md:grid-cols-2 gap-14 mt-14">
                 <div>
                     <div className="flex flex-col gap-3">
-                        <span className="text-orange font-semibold">
+                        <span className="text-orange font-semibold" data-aos='fade-up'
+          data-aos-duration='1000'>
                             {" "}
                             Talk to us
                         </span>
 
-                        <h3 className="text-4xl font-medium ">
+                        <h3 className="text-4xl font-medium" data-aos='fade-up'
+          data-aos-duration='1000'>
                             Any Question? <br /> Fell Free to Contact
                         </h3>
 
-                        <p className="max-w-lg">
+                        <p className="max-w-lg" data-aos='fade-up'
+          data-aos-duration='1000'>
                             With a wide variety of popular aircraft, charter
                             flights offer the most efficient and comfortable way
                             to travel in style.
                         </p>
-                        <div className="flex flex-col gap-5 mt-3">
+                        <div className="flex flex-col gap-5 mt-3" data-aos='fade-up'
+          data-aos-duration='1000'>
                             <div className="flex items-center">
                                 <Phone className="w-9 h-9 text-white rounded-full p-2 mr-2 bg-orange" />
                                 <Link href="tel:+11234567890">
@@ -93,7 +97,8 @@ const Contact = () => {
                     </div>
                 </div>
 
-                <div className="w-full bg-orange rounded-lg py-3 px-5 lg:px-10">
+                <div className="w-full bg-orange rounded-lg py-3 px-5 lg:px-10" data-aos='fade-up'
+          data-aos-duration='1000'>
                     <form
                         ref={formRef}
                         onSubmit={handleSubmit}

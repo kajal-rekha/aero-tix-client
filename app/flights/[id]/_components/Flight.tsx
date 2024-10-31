@@ -23,7 +23,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
     };
     return (
         <div className="wrapper mb-20 mt-32">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center"  >
                 <div className="w-full overflow-hidden md:h-[32rem] mt-10 group rounded-lg">
                     <Image
                         src={flight.image}
@@ -38,6 +38,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                     <h4 className="text-orange-500 font-semibold text-xl">
                         About {flight.airline}
                     </h4>
+                    
                     <p>
                         {flight.airline} is a state-of-the-art aircraft designed
                         for long-haul flights, offering exceptional fuel
@@ -67,6 +68,7 @@ const Flight: React.FC<FlightProps> = ({ flight }) => {
                         </button>
                     </div>
                 </div>
+                
             </div>
         </div>
     );

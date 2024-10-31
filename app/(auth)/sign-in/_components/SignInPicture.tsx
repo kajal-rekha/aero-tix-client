@@ -3,7 +3,8 @@ import Image from "next/image";
 
 const SignInPicture = () => {
     return (
-        <div className="relative h-[95vh] w-full overflow-hidden hidden md:block">
+        <div className="relative h-[95vh] w-full overflow-hidden hidden md:block" data-aos='fade-left'
+          data-aos-duration='1000'>
             <Image
                 src="https://images.pexels.com/photos/14914173/pexels-photo-14914173.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt="sign in picture"

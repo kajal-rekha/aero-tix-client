@@ -10,10 +10,12 @@ const Destination = () => {
                 <div className="wrapper px-4">
                     <div className="flex flex-col lg:flex-row gap-20">
                         <div className="flex flex-col gap-5 justify-center items-start  md:max-w-lg w-full">
-                            <h3 className="text-left text-3xl text-slate font-medium">
+                            <h3 className="text-left text-3xl text-slate font-medium" data-aos='fade-up'
+          data-aos-duration='1000'>
                                 Popular Destinations
                             </h3>
-                            <p>
+                            <p data-aos='fade-up'
+          data-aos-duration='1000'>
                                 {`Explore the world’s most exciting destinations
                                 with ease using Aero Tix. Whether you're
                                 dreaming of the romantic streets of Paris, the
@@ -25,13 +27,15 @@ const Destination = () => {
                                 ensuring that you get the best deal for your
                                 trip.`}
                             </p>
-                            <Button>Discover more</Button>
+                            <Button data-aos='fade-up'
+          data-aos-duration='1000'>Discover more</Button>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
                             {destinationData.map((destination) => (
                                 <div
                                     key={destination.id}
-                                    className="bg-white rounded-xl shadow-md overflow-hidden"
+                                    className="bg-white rounded-xl shadow-md overflow-hidden" data-aos='fade-up'
+          data-aos-duration='1000'
                                 >
                                     <div className="group overflow-hidden ">
                                         <Image

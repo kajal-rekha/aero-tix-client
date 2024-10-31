@@ -92,7 +92,8 @@ const SignUpForm = () => {
     };
 
     return (
-        <div className="flex flex-col gap-10 bg-slate p-10">
+        <div className="flex flex-col gap-10 bg-slate p-10" data-aos='fade-right'
+          data-aos-duration='1000'>
             <div className="flex flex-col gap-1.5">
                 <h2 className="text-orange">Create an account!</h2>
                 <p className="text-gray/90">

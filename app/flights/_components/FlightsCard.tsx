@@ -12,20 +12,23 @@ const FlightsCard: React.FC<FlightsCardProps> = ({ flight }) => {
         <div>
             <div
                 key={flight._id}
-                className="w-full lg:gap-8 xl:gap-5 shadow-md rounded-md overflow-hidden p-5 bg-white"
+                className="w-full lg:gap-8 xl:gap-5 shadow-md rounded-md overflow-hidden p-5 bg-white md:h-[28rem] 2xl:h-[30rem]" data-aos='fade-up'
+          data-aos-duration='1000'
             >
                 <div className="w-full h-[20rem] lg:h-[14rem] overflow-hidden group rounded-xl">
                     <Image
                         src={flight.image}
                         width={500}
                         height={500}
+
                         alt={flight.airline}
                         priority
                         className="w-full h-full object-cover group-hover:scale-125 duration-500"
                     />
                 </div>
 
-                <div className="pt-5 flex flex-col gap-2">
+                <div className="pt-5 flex flex-col gap-2" data-aos='fade-up'
+          data-aos-duration='1000'>
                     <h3 className="text-lg font-semibold">
                         Airline : {flight.airline}
                     </h3>
@@ -54,7 +57,9 @@ const FlightsCard: React.FC<FlightsCardProps> = ({ flight }) => {
                         </p>
                         <p>Seats: {flight.seats}</p>
                     </div>
-                    <div className="mt-2">
+                    <div className="mt-2"  
+                    data-aos='fade-up'
+          data-aos-duration='1000'>
                         <Link
                             href={`/flights/${flight._id}`}
                             className={cn(buttonVariants({ variant: "ocean" }))}

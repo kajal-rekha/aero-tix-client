@@ -5,11 +5,12 @@ const Hero = () => {
     return (
         <section className="bg-slate hero-section pt-5">
             <div className="wrapper grid grid-cols md:grid-cols-2 gap-10 md:gap-14 sp text-gray/90">
-                <div className="flex flex-col gap-5">
-                    <p className="text-orange uppercase text-[14px] md:text-lg">
+                <div className="flex flex-col gap-5" data-aos='fade-up'
+          data-aos-duration='1000'>
+                    <p className="text-orange uppercase text-[14px] md:text-lg" >
                         Welcome to our AeroTix
                     </p>
-                    <h1 className="leading-snug ">
+                    <h1 className="leading-snug" >
                         Elevate Your Ultimate Travel Experience
                     </h1>
 

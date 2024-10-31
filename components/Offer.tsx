@@ -16,21 +16,25 @@ const Offer = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-slate to-transparent z-2"></div>
             <div className="relative z-3 h-full flex flex-col justify-center px-4 sm:px-6 lg:px-8">
                 <div className="wrapper">
-                    <div className="md:max-w-3xl flex flex-col gap-2">
-                        <span className="text-orange  text-[15px]  md:text-lg font-semibold mb-2">
+                    <div className="md:max-w-3xl flex flex-col gap-2" >
+                        <span className="text-orange  text-[15px]  md:text-lg font-semibold mb-2" data-aos='fade-up'
+          data-aos-duration='1000'>
                             Special offer
                         </span>
-                        <h2 className="text-2xl md:text-3xl  font-bold text-white mb-4">
+                        <h2 className="text-2xl md:text-3xl  font-bold text-white mb-4" data-aos='fade-up'
+          data-aos-duration='1200'>
                             Take advantage of this exclusive offer to save 20%
                             on all flights
                         </h2>
-                        <p className=" text-xl md:text-2xl  text-white mb-6">
+                        <p className=" text-xl md:text-2xl  text-white mb-6" data-aos='fade-up'
+          data-aos-duration='1400'>
                             Our premium service ensures a smooth and efficient
                             booking process, tailored to busy professionals who
                             value their time.
                         </p>
 
-                        <div>
+                        <div data-aos='fade-up'
+          data-aos-duration='1500'>
                             <Button>Read more</Button>
                         </div>
                     </div>

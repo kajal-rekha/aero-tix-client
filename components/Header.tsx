@@ -24,14 +24,16 @@ const Navbar = () => {
         <header className="fixed left-0 right-0 top-0 z-[100] flex h-20  items-center border-b border-gray/20 bg-[#00020c] text-gray/90 backdrop-blur-xl">
             {/* NAV LEFT */}
             <nav className="wrapper flex w-full h-full items-center justify-between gap-5">
-                <div>
+                <div data-aos='fade-right'
+          data-aos-duration='1000'>
                     <Link href="/" className="text-2xl font-semibold ">
                         AeroTix
                     </Link>
                 </div>
 
                 {/* NAV MID */}
-                <ul className="md:flex hidden items-center gap-5 text-lg ">
+                <ul className="md:flex hidden items-center gap-5 text-lg" data-aos='fade-down'
+          data-aos-duration='1000'>
                     <li>
                         <Link href="/" className="link-item">
                             Home
@@ -80,7 +82,8 @@ const Navbar = () => {
                 </ul>
 
                 {/* NAV RIGHT */}
-                <div className="flex gap-5 items-center justify-center -mr-28 md:mr-0">
+                <div className="flex gap-5 items-center justify-center -mr-28 md:mr-0" data-aos='fade-left'
+          data-aos-duration='1000'>
                     {!session?.user ? (
                         <Link
                             href="/sign-up"
@@ -131,11 +134,11 @@ const Navbar = () => {
             {/* Mobile Menu */}
             <div
                 className={`fixed top-20 left-0  h-screen w-full  transition-transform duration-500 bg-gray text-black ${
-                    toggle ? "-translate-y-0" : "translate-y-full"
+                    toggle ? "-translate-x-0" : "-translate-x-full"
                 }`}
             >
-                <ul className="flex flex-col gap-2 p-10 ">
-                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
+                <ul className="flex flex-col gap-2 p-10">
+                    <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500" >
                         <Link href="/">Home</Link>
                     </li>
                     <li className="hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">

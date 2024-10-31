@@ -1,3 +1,7 @@
+"use client"
+
+
+
 //import BookingForm from "@/components/BookingForm";
 
 import Hero from "@/components/Hero";
@@ -10,8 +14,15 @@ import Destination from "../destination/page";
 //import Blog from "../blog/page";
 import ContactPage from "../contact/page";
 import Blog from "@/components/Blog";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HomePage = () => {
+
+     useEffect(() => {
+       AOS.init();
+     }, []);
     return (
         <main>
             <Hero />

@@ -36,7 +36,8 @@ const Flights = () => {
             </div>
 
             {pathname === "/" && flights && (
-                <div className="mt-20 flex justify-center">
+                <div className="mt-20 flex justify-center" data-aos='fade-up'
+          data-aos-duration='1000'>
                     <Link
                         href="/flights"
                         className={cn(buttonVariants({ variant: "ocean" }))}

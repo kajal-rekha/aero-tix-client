@@ -13,7 +13,7 @@ const BookingData = () => {
         return null;
     }
 
-    // Extract specific properties from the user object
+    
     const { username, email, _id } = userAndToken.user; 
 
     return (

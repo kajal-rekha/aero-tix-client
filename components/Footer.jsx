@@ -7,10 +7,11 @@ const Footer = () => {
         <footer className="footer mt-24">
             <div className="footer-bg bg-slate text-white ">
                 <div className="wrapper sp grid grid-cols xl:grid-cols-5 gap-7 md:gap-8 lg:gap-6 xl:mt-12 2xl:mt-24 -mt-7 text-light/60">
-                    <div className="w-full ">
+                    <div className="w-full " data-aos='fade-up'
+          data-aos-duration='1000'>
                         <Link
                             href="/"
-                            className="text-xl lg:text-3xl font-semibold text-orange"
+                            className="text-xl lg:text-3xl font-semibold text-orange" 
                         >
                             AeroTix
                         </Link>
@@ -20,7 +21,8 @@ const Footer = () => {
                             experiences.
                         </p>
                     </div>
-                    <div className="w-full ">
+                    <div className="w-full " data-aos='fade-up'
+          data-aos-duration='1000'>
                         <h2 className="text-xl md:text-2xl font-semibold ">
                             Quick links
                         </h2>
@@ -46,7 +48,8 @@ const Footer = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="w-full ">
+                    <div className="w-full " data-aos='fade-up'
+          data-aos-duration='1000'>
                         <h2 className="text-xl md:text-2xl font-semibold ">
                             More links
                         </h2>
@@ -75,7 +78,8 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="w-full ">
+                    <div className="w-full " data-aos='fade-up'
+          data-aos-duration='1000'>
                         <h2 className="text-xl md:text-2xl font-semibold ">
                             Services
                         </h2>
@@ -96,7 +100,8 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    <div className="flex flex-col gap-2">
+                    <div className="flex flex-col gap-2" data-aos='fade-up'
+          data-aos-duration='1000'>
                         <h2 className="text-xl md:text-2xl font-semibold ">
                             Newsletter
                         </h2>
@@ -149,7 +154,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="bg-slate  p-5 md:p-10 border-t border-white/90">
+            <div className="bg-slate  p-5 md:p-10 border-t border-white/90" >
                 <p className="text-center text-white/90 text-[13px] md:text-lg">
                     &copy; {new Date().getFullYear()}{" "}
                     <Link href="/" className="link-item">

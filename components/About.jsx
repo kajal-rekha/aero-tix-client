@@ -3,10 +3,11 @@ import Button from "./ui/Button";
 
 const About = () => {
     return (
-        <section className="mt-32 ">
+        <section className="mt-32 ">-
             <div className="wrapper">
                 <div className="grid grid-cols-1  md:grid-cols-2 gap-16">
-                    <div className="relative">
+                    <div className="relative" data-aos='fade-right'
+          data-aos-duration='1000'>
                         <div className=" w-[18rem] md:w-[28rem] h-[28rem] md:h-[39rem] ">
                             <Image
                                 src="https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=600"
@@ -29,7 +30,8 @@ const About = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col gap-5 justify-center mt-10">
+                    <div className="flex flex-col gap-5 justify-center mt-10" data-aos='fade-left'
+          data-aos-duration='1000'>
                         <h3 className="font-semibold text-xl">
                             <span className="text-orange"> Why </span>
                             Choose Us
@@ -73,7 +75,8 @@ const About = () => {
                             </ul>
                         </div>
 
-                        <div className="mt-2">
+                        <div className="mt-2" data-aos='fade-up'
+          data-aos-duration='1000'>
                             <Button>Discover more</Button>
                         </div>
                     </div>
