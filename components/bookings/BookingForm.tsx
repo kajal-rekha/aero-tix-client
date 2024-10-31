@@ -54,7 +54,7 @@ const BookingForm = ({ flightId }: { flightId: string }) => {
             if (res.ok) {
                 console.log("Booking added successfully");
                 dispatch(addBooking(bookingData));
-                router.push("/bookingData");
+                router.push("/myBooking");
             } else {
                 const errorText = await res.text();
                 console.error("Booking failed:", res.status, errorText);

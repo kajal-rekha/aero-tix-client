@@ -3,7 +3,7 @@ import { RootState } from "@/redux/store";
 import { useRouter } from "next/navigation";
 import { useSelector } from "react-redux";
 
-const BookingData = () => {
+const MyBooking = () => {
     const bookings = useSelector((state: RootState) => state.booking.bookings);
     const { userAndToken } = useSelector((state: RootState) => state.auth);
     const router = useRouter();
@@ -19,6 +19,7 @@ const BookingData = () => {
     return (
         <main className="wrapper mt-32 min-h-screen">
             <h1 className="text-2xl font-bold mb-10 text-center">My Bookings</h1>
+            
 
             {bookings.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-3 2xl:grid-cols-4 gap-7">
@@ -61,4 +62,4 @@ const BookingData = () => {
     );
 };
 
-export default BookingData;
+export default MyBooking;

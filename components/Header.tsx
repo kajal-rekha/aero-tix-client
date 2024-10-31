@@ -63,7 +63,7 @@ const Navbar = () => {
                     </li>
                     {session?.user && bookings.length > 0 && (
                         <li className="relative">
-                            <Link href="/bookingData" className="link-item">
+                            <Link href="/myBooking" className="link-item">
                                 Bookings
                             </Link>
                         </li>
@@ -152,7 +152,7 @@ const Navbar = () => {
                     </li>
                      {session?.user && bookings.length > 0 && (
                         <li className="relative hover:bg-orange py-2 px-6 rounded-md flex items-center duration-500">
-                            <Link href="/bookingData">
+                            <Link href="/myBooking">
                                 Bookings
                             </Link>
                         </li>
