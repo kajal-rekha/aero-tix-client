@@ -29,18 +29,20 @@ const Contact = () => {
                 process.env.NEXT_PUBLIC_USER_ID as string
             )
             .then(
-                () => {
-                    toast.success("Your message sent!");
-                    setFormData({
-                        fullName: "",
-                        email: "",
-                        message: ""
-                    });
-                },
-                () => {
-                    toast.error("Failed, please try again later!");
-                }
-            );
+    () => {
+        toast.success("Your message sent!");
+        setFormData({
+            fullName: "",
+            email: "",
+            message: ""
+        });
+    },
+    (error) => {
+        console.error("EmailJS Error:", error);
+        toast.error("Failed, please try again later!");
+    }
+);
+
         console.log(formData);
     };
 
